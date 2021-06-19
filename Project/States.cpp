@@ -172,7 +172,7 @@ void GameState::Enter() // Used for initialization.
 	m_pMusic=(nullptr);
 	count1 = 0;
 	count2 = 0;
-	gameWon = 10;
+	gameWon = 2;
 	m_pBGText = IMG_LoadTexture(Game::GetInstance().GetRenderer(), "Assets/Images/background.png");
 	m_pSpriteTexture = IMG_LoadTexture(Game::GetInstance().GetRenderer(), "Assets/Images/sprites.png");
 	digit1 = Counter(Game::GetInstance().GetRenderer(), 0, 0);
@@ -529,7 +529,7 @@ void WinState::Enter()
 	int buttonWidth = 400;
 	int buttonHeight = 100;
 	float buttonX = Game::GetInstance().kWidth / 2 - buttonWidth / 2.0f;
-	float buttonY = Game::GetInstance().kHeight / 2 - buttonHeight / 2.0f;
+	float buttonY = Game::GetInstance().kHeight / 1.7 - buttonHeight / 2.0f;
 	m_objects.emplace("exit", new ExitButton({ 0, 0, buttonWidth, buttonHeight }, { buttonX, buttonY, (float)buttonWidth, (float)buttonHeight }, "exit"));
 }
 
