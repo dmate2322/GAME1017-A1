@@ -112,38 +112,7 @@ void Game::HandleEvents()
 	m_deltaTime = lastFrameDuration.count();
 	m_lastFrameTime = thisFrameTime;
 	EventManager::HandleEvents();
-	
-	//SDL_Event event;
-	//while (SDL_PollEvent(&event))
-	//{
-	//	switch (event.type)
-	//	{
-	//	case SDL_QUIT:
-	//		m_running = false;
-	//		break;
-
-	//	case SDL_KEYDOWN: // Try SDL_KEYUP instead.
-	//		if (event.key.keysym.sym == SDLK_ESCAPE)
-	//			QuitGame();
-	//		break;
-	//	case SDL_KEYUP: // Try SDL_KEYUP instead.
-	//		if (event.key.keysym.sym == SDLK_SPACE)
-	//			m_pCanShoot = true;
-	//		break;
-	//	}
-	//}
 }
-
-//bool Game::KeyDown(SDL_Scancode key)
-//{
-//	if(m_keyStates)
-//	{
-//		return m_keyStates[key] == 1;
-//	}
-//	return false;
-//}
-
-
 
 void Game::Update(float deltaTime)
 {

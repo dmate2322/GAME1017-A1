@@ -172,7 +172,7 @@ void GameState::Enter() // Used for initialization.
 	m_pMusic=(nullptr);
 	count1 = 0;
 	count2 = 0;
-	gameWon = 2;
+	gameWon = 1;
 	m_pBGText = IMG_LoadTexture(Game::GetInstance().GetRenderer(), "Assets/Images/background.png");
 	m_pSpriteTexture = IMG_LoadTexture(Game::GetInstance().GetRenderer(), "Assets/Images/sprites.png");
 	digit1 = Counter(Game::GetInstance().GetRenderer(), 0, 0);
@@ -352,7 +352,7 @@ void GameState::Update(float deltaTime)
 	CheckCollision();
 
 	//Check for win
-	if (count2 == gameWon)
+	if (count1 == 1 && count2 == 5)
 	{
 		StateManager::ChangeState(new WinState()); // Change to new WinState
 	}
